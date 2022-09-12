@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Pass #1: Push",
+    "workouts": [
+      "Bänkpress: 4 set, 6–8 reps, 2–3 min vila",
+      "Militärpress: 4 set, 6–8 reps, 2–3 min vila",
+      "Pushdowns: 5 set, 10–12 reps, 1–2 min vila",
+      "Sned hantelpress: 3 set, 10 reps, 1–2 min vila",
+      "Axelpress: 3 set, 10 reps, 1–2 min"
+    ]
+  },
+  {
+    "title": "Pass #2: Pull",
+    "workouts": [
+      "Marklyft: 4 set, 6–8 reps, 2–3 min vila",
+      "Skivstångsrodd: 4 set, 6–8 reps, 2–3 min vila",
+      "Stångcurl: 4 set, 10–12 reps, 1–2 min vila",
+      "Latsdrag: 3 set, 10–12 reps, 1–2 min vila",
+      "Omvända flyes: 3 set, 15 reps, 1 min vila"
+    ]
+  },
+  {
+    "title": "Pass #3:  Legs & Core",
+    "workouts": [
+      "Knäböj: 5 set, 6–8 reps, 2–3 min vila",
+      "Stela marklyft: 5 set, 6–8 reps, 2–3 min vila",
+      "Lårcurl: 3 set, 10–12 reps, 1–2 min vila",
+      "Benspark: 3 set, 10–12 reps, 1–2 min vila",
+      "Vadpress: 4 set, 10–12 reps, 1–2 min vila",
+      "Crunches: 4 set, 10–12 reps, 1–2 min vila"
+    ]
+  }
+]
