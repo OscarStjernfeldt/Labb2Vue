@@ -3,4 +3,4 @@ interface IWorkout {
     workouts: string[];
 }
 
-export type {IWorkout}
+export type { IWorkout };

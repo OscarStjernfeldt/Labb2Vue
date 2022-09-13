@@ -1,6 +1,22 @@
 <script setup lang="ts">
 import WorkoutList from "@/components/WorkoutList.vue";
 import SavedWorkouts from "@/components/SavedWorkouts.vue"
+import {onMounted, ref} from "vue";
+import type {IWorkout} from "@/interfaces/IWorkout";
+
+let savedWorkouts = ref<IWorkout[]>([]);
+
+function onSaved(workout: IWorkout) {
+  console.log(workout);
+  savedWorkouts.value.push(workout);
+  localStorage.setItem('savedWorkouts', JSON.stringify(savedWorkouts.value));
+}
+onMounted(() => {
+  const savedWorkoutsString = localStorage.getItem('savedWorkouts');
+  if (savedWorkoutsString) {
+    savedWorkouts.value = JSON.parse(savedWorkoutsString);
+  }
+})
 </script>
 
 <template>
@@ -19,8 +35,8 @@ import SavedWorkouts from "@/components/SavedWorkouts.vue"
       </h2>
     </div>
     <div class="align-content">
-      <WorkoutList/>
-      <SavedWorkouts/>
+      <WorkoutList @saved="onSaved"/>
+      <SavedWorkouts :savedWorkouts="savedWorkouts"/>
     </div>
 
   </div>
@@ -33,9 +49,9 @@ import SavedWorkouts from "@/components/SavedWorkouts.vue"
 
 .center-content {
   display: flex;
-
   flex-direction: column;
   width: 80%;
+  height: fit-content;
   margin: auto;
   justify-content: center;
 }
@@ -97,5 +113,7 @@ import SavedWorkouts from "@/components/SavedWorkouts.vue"
 .align-content {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  padding: 0;
 }
 </style>

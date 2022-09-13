@@ -2,15 +2,16 @@
 defineProps({
   title: {type: String, required: true},
   workouts: {type: Array, required: true},
+  shownAsSaved: {type: Boolean, required: false, default: false},
 })
 </script>
 
 <template>
   <article class="workout">
     <div class="workout-text">
-      <div class="align-checkbox-title">
+      <div class="align-addToList-title">
         <h3 class="workout-title">{{ title }}</h3>
-        <button class="checkbox" v-on:click.prevent="addToSavedList">Save workout</button>
+        <button v-if="!shownAsSaved" class="addToList" @click="$emit('buttonClicked', {title, workouts})">Save workout</button>
       </div>
       <ul>
         <li v-for="(workout, index) in workouts" :key="index">{{ workout }}</li>
@@ -53,7 +54,7 @@ h3 {
   align-items: flex-start;
 }
 
-.align-checkbox-title {
+.align-addToList-title {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -63,21 +64,19 @@ h3 {
   margin: 0;
 }
 
-.checkbox {
+.addToList {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   border: black solid 1px;
   border-radius: var(--border-radius);
   background: #E45826;
-  width: 30%;
+  width: 100px;
+  height: 30px;
   align-items: center;
 }
 
-.food-picture {
-  width: 100%;
-  border-radius: var(--border-radius);
-  max-width: 200px;
-  border: black solid 1px
+.addToList:hover {
+  background: #F0A500;
 }
 </style>

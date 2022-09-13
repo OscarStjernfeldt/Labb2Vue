@@ -11,11 +11,15 @@ import PageHeader from "./components/PageHeader.vue"
   <main>
     <RouterView/>
   </main>
-  <footer>
+  <footer class="put-buttom">
     <PageFooter/>
   </footer>
 </template>
 
 <style scoped>
-
+.put-buttom {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
 </style>

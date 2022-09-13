@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import {RouterLink} from 'vue-router'</script>
+import {RouterLink} from 'vue-router';
+</script>
 
 <template>
     <header class="content">
@@ -9,7 +10,7 @@ import {RouterLink} from 'vue-router'</script>
       <div class="topnav" id="myTopnav">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="#search">Search</RouterLink>
-        <RouterLink to="/savedworkouts">Saved workouts</RouterLink>
+        <RouterLink to="/saved-workouts">Saved workouts</RouterLink>
         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
     </header>
