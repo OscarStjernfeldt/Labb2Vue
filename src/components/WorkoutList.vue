@@ -9,7 +9,7 @@ const workouts: Ref<IWorkout[]> = ref([]);
 
 const emits = defineEmits(['saved']);
 
-function addToList(workout:IWorkout) {
+function addToList(workout: IWorkout) {
   emits('saved', workout)
 }
 
@@ -25,10 +25,16 @@ onBeforeMount(() => {
 </template>
 
 <style scoped>
+* {
+  --border-radius: 10px;
+}
+
 .workouts {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 0;
+  margin: 1% 1% 0 0;
+  height: 50%;
+
 }
 </style>

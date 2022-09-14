@@ -11,12 +11,17 @@ function onSaved(workout: IWorkout) {
   savedWorkouts.value.push(workout);
   localStorage.setItem('savedWorkouts', JSON.stringify(savedWorkouts.value));
 }
+
 onMounted(() => {
   const savedWorkoutsString = localStorage.getItem('savedWorkouts');
   if (savedWorkoutsString) {
     savedWorkouts.value = JSON.parse(savedWorkoutsString);
   }
 })
+
+function clearWorkouts() {
+  savedWorkouts.value = []
+}
 </script>
 
 <template>
@@ -36,7 +41,7 @@ onMounted(() => {
     </div>
     <div class="align-content">
       <WorkoutList @saved="onSaved"/>
-      <SavedWorkouts :savedWorkouts="savedWorkouts"/>
+      <SavedWorkouts :savedWorkouts="savedWorkouts" @clearWorkouts="clearWorkouts"/>
     </div>
 
   </div>

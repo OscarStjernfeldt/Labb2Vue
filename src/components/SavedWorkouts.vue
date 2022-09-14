@@ -10,6 +10,12 @@ defineProps({
   },
 })
 
+const emits = defineEmits(['clearWorkouts']);
+
+function clearList() {
+  localStorage.clear();
+  emits("clearWorkouts");
+}
 </script>
 
 <template>
@@ -17,7 +23,7 @@ defineProps({
     <div class="list-content">
       <h1 class="saved-workouts-title">Saved Workouts</h1>
       <div>
-        <button class="button-reset-list">Reset list</button>
+        <button class="button-reset-list" @click="clearList">Reset list</button>
       </div>
       <div class="saved-workouts">
         <div class="saved-workout" v-for="(workout, index) in savedWorkouts" :key="index">
@@ -42,6 +48,7 @@ h1 {
   justify-content: center;
   height: 100%;
   width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
