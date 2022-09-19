@@ -36,8 +36,9 @@ h1 h2 h3 {
 
 .topnav {
   overflow: hidden;
-  background-color: #000000;
+  background-color: #1B1A17;
   min-width: 350px;
+  border: solid 2px #F0A500;
   border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
 
@@ -56,8 +57,8 @@ h1 h2 h3 {
 }
 
 .topnav a:hover {
-  background-color: #555;
-  color: white;
+  background-color: #F0A500;
+  color: #1B1A17;
 }
 
 .logo-background {
