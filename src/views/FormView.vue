@@ -5,7 +5,7 @@ import PageForm from '../components/PageForm.vue'</script>
   <section class="center-page">
     <div class="title">
       <h2>
-        CLIENT FORM
+        ADD NEW SUGGESTION
       </h2>
     </div>
   </section>
